@@ -38,38 +38,110 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    min-height: 360px;
-    background: #000;
+    min-height: 70vh;
+    background: #111;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero img {
-    max-width: 200px;
-    height: auto;
-    object-fit: contain;
-    filter: none;
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
     z-index: 1;
 }
 
-.hero .overlay {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
+/* CONTENT */
+.hero-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
+    max-width: 800px;
+    padding: 40px 20px;
     color: white;
-    padding: 0 20px;
 }
 
-.hero .overlay h2 {
-    font-size: 26px;
-    margin-bottom: 6px;
+/* LOGO */
+.hero-logo {
+    width: 160px;
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 24px;
+    background: transparent;
 }
 
-.hero .overlay p {
-    font-size: 15px;
+/* TEXT */
+.hero-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 16px;
     opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    background: #111;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
+    z-index: 1;
+}
+
+/* CONTENT */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 40px 20px;
+    color: white;
+}
+
+/* LOGO */
+.hero-logo {
+    width: 160px;
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 24px;
+    background: transparent;
+}
+
+/* TEXT */
+.hero-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.6;
 }
 
 
