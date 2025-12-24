@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galér Lilin – Batik Heritage Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Galér Lilin</h1>
+        <p>Batik Heritage Premium</p>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img src="DESAIN-KAMU.jpg" alt="Batik Hero">
+        <div class="overlay">
+            <h2>Terinspirasi Oleh Warisan Nusantara</h2>
+            <p>Koleksi batik eksklusif yang memadukan tradisi dan estetika modern.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h3>Tentang Galér Lilin</h3>
+        <p>
+            Galér Lilin adalah brand batik semi-premium yang merayakan keindahan
+            heritage Indonesia. Setiap motif dibuat dengan detail, terinspirasi
+            dari filosofi klasik yang diwariskan turun-temurun.
+        </p>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="products">
+
+        <div class="card">
+            <h4>Batik Lereng</h4>
+            <p class="price">Rp 99.000</p>
+            <p>Motif diagonal klasik yang simbolis.</p>
+        </div>
+
+        <div class="card">
+            <h4>Batik Kawung</h4>
+            <p class="price">Rp 99.000</p>
+            <p>Simbol kemurnian dan ketenangan.</p>
+        </div>
+
+        <div class="card">
+            <h4>Batik Mega Mendung</h4>
+            <p class="price">Rp 150.000</p>
+            <p>Motif awan khas Cirebon, penuh makna.</p>
+        </div>
+
+        <div class="card">
+            <h4>Batik Sekar Jagad</h4>
+            <p class="price">Rp 145.000</p>
+            <p>Simbol dunia yang penuh warna.</p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        © 2025 Galér Lilin – Handmade Heritage Batik
+    </footer>
+
+</body>
+</html>
+/* COLOR THEME */
+:root {
+    --gold: #c6a667;
+    --coffee: #3b2f2f;
+    --light: #f5f5f5;
+    --dark: #333;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* HEADER */
+.header {
+    background: var(--coffee);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.hero .overlay {
+    position: absolute;
+    inset: 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hero .overlay h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.hero .overlay p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+.about h3 {
+    color: var(--gold);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.card h4 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.card .price {
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--coffee);
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
