@@ -1,75 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galér Lilin – Batik Heritage Premium</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-
-    <!-- HEADER -->
-    <header class="header">
-        <h1>Galér Lilin</h1>
-        <p>Batik Heritage Premium</p>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-        <img src="DESAIN-KAMU.jpg" alt="Batik Hero">
-        <div class="overlay">
-            <h2>Terinspirasi Oleh Warisan Nusantara</h2>
-            <p>Koleksi batik eksklusif yang memadukan tradisi dan estetika modern.</p>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about">
-        <h3>Tentang Galér Lilin</h3>
-        <p>
-            Galér Lilin adalah brand batik semi-premium yang merayakan keindahan
-            heritage Indonesia. Setiap motif dibuat dengan detail, terinspirasi
-            dari filosofi klasik yang diwariskan turun-temurun.
-        </p>
-    </section>
-
-    <!-- PRODUCT GRID -->
-    <section class="products">
-
-        <div class="card">
-            <h4>Batik Lereng</h4>
-            <p class="price">Rp 99.000</p>
-            <p>Motif diagonal klasik yang simbolis.</p>
-        </div>
-
-        <div class="card">
-            <h4>Batik Kawung</h4>
-            <p class="price">Rp 99.000</p>
-            <p>Simbol kemurnian dan ketenangan.</p>
-        </div>
-
-        <div class="card">
-            <h4>Batik Mega Mendung</h4>
-            <p class="price">Rp 150.000</p>
-            <p>Motif awan khas Cirebon, penuh makna.</p>
-        </div>
-
-        <div class="card">
-            <h4>Batik Sekar Jagad</h4>
-            <p class="price">Rp 145.000</p>
-            <p>Simbol dunia yang penuh warna.</p>
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        © 2025 Galér Lilin – Handmade Heritage Batik
-    </footer>
-
-</body>
-</html>
 /* COLOR THEME */
 :root {
     --gold: #c6a667;
@@ -109,36 +38,40 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 300px;
+    min-height: 360px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(70%);
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: none;
+    z-index: 1;
 }
 
 .hero .overlay {
     position: absolute;
-    inset: 0;
-    color: white;
+    bottom: 20px;
+    width: 100%;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
+    color: white;
+    padding: 0 20px;
 }
 
 .hero .overlay h2 {
-    font-size: 28px;
-    margin-bottom: 8px;
+    font-size: 26px;
+    margin-bottom: 6px;
 }
 
 .hero .overlay p {
-    font-size: 16px;
+    font-size: 15px;
     opacity: 0.9;
 }
+
 
 /* ABOUT */
 .about {
