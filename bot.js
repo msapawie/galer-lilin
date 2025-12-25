@@ -57,7 +57,7 @@ chatBox.appendChild(header);
 
 /* === IFRAME CHAT === */
 const iframe = document.createElement("iframe");
-iframe.src = "https://cloud.flowiseai.com/chatbot/b23378c8-042a-4966-98e8-042ad732c1ef";
+iframe.src = "https://cloud.flowiseai.com/chatbot/a6f5a4d1-35a0-464d-8f0f-d197dae94838";
 iframe.style.cssText = `
   border: none;
   width: 100%;
