@@ -1,31 +1,84 @@
-// === CHAT BUTTON ===
+/* === CHAT FLOATING BUTTON === */
 const chatBtn = document.createElement("div");
-chatBtn.innerHTML = "Chat Assistant";
-chatBtn.style.position = "fixed";
-chatBtn.style.bottom = "20px";
-chatBtn.style.right = "20px";
-chatBtn.style.background = "#c6a667";
-chatBtn.style.color = "#fff";
-chatBtn.style.padding = "12px 18px";
-chatBtn.style.borderRadius = "25px";
-chatBtn.style.cursor = "pointer";
-chatBtn.style.boxShadow = "0 3px 10px rgba(0,0,0,0.15)";
+chatBtn.innerHTML = "💬";
+chatBtn.style.cssText = `
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #c6a667;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+`;
 document.body.appendChild(chatBtn);
 
-// === CHAT BOX ===
-const frame = document.createElement("iframe");
-frame.src = "https://cloud.flowiseai.com/api/v1/prediction/b23378c8-042a-4966-98e8-042ad732c1ef";  // ganti nanti
-frame.style.position = "fixed";
-frame.style.bottom = "80px";
-frame.style.right = "20px";
-frame.style.width = "350px";
-frame.style.height = "450px";
-frame.style.border = "1px solid #ccc";
-frame.style.borderRadius = "12px";
-frame.style.display = "none";
-document.body.appendChild(frame);
+/* === CHAT CONTAINER === */
+const chatBox = document.createElement("div");
+chatBox.style.cssText = `
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 360px;
+  height: 480px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+`;
 
-// toggle
+/* === HEADER === */
+const header = document.createElement("div");
+header.style.cssText = `
+  background: #3b2f2f;
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+header.innerHTML = `
+  <span>Galér Lilin Assistant</span>
+  <span id="closeChat" style="cursor:pointer;">✕</span>
+`;
+
+chatBox.appendChild(header);
+
+/* === IFRAME CHAT === */
+const iframe = document.createElement("iframe");
+iframe.src = "https://cloud.flowiseai.com/chatbot/b23378c8-042a-4966-98e8-042ad732c1ef";
+iframe.style.cssText = `
+  border: none;
+  width: 100%;
+  height: 100%;
+`;
+chatBox.appendChild(iframe);
+
+document.body.appendChild(chatBox);
+
+/* === TOGGLE LOGIC === */
 chatBtn.addEventListener("click", () => {
-    frame.style.display = frame.style.display === "none" ? "block" : "none";
+  chatBox.style.display = "flex";
 });
+
+header.querySelector("#closeChat").addEventListener("click", () => {
+  chatBox.style.display = "none";
+});
+
+/* === MOBILE RESPONSIVE === */
+if (window.innerWidth < 600) {
+  chatBox.style.width = "90vw";
+  chatBox.style.height = "70vh";
+  chatBox.style.right = "5vw";
+}
